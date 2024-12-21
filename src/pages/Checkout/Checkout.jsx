@@ -30,8 +30,8 @@ import Input from '../../ui/Input';
 import SpinnerMini from '../../ui/SpinnerMini';
 
 const cx = classNames.bind(styles);
-const cancelUrl = 'http://localhost:5173/checkout';
-const returnUrl = 'http://localhost:5173/thankyou';
+const cancelUrl = 'https://pursuit-website.vercel.app/checkout';
+const returnUrl = 'https://pursuit-website.vercel.app/thankyou';
 const checkOutSchema = schema.pick([
   'email',
   'address',

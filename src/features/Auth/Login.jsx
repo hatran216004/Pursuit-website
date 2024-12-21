@@ -22,11 +22,7 @@ function Login() {
     reset,
     formState: { errors }
   } = useForm({
-    resolver: yupResolver(loginSchema),
-    defaultValues: {
-      email: 'hatran@example.com',
-      password: 'test1234'
-    }
+    resolver: yupResolver(loginSchema)
   });
   const navigate = useNavigate();
   const { login, isLogging } = useLogin();
