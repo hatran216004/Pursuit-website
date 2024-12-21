@@ -1,0 +1,160 @@
+.checkout {
+  &-wrapper {
+    margin-top: 100px;
+  }
+
+  &-heading {
+    color: #131717;
+    font-size: 2.4rem;
+    font-weight: 700;
+    line-height: 141.667%;
+  }
+
+  &-form {
+    margin-top: 48px;
+
+    &-label {
+      margin-bottom: 12px;
+      color: #131717;
+      font-size: 1.8rem;
+      font-weight: 600;
+      line-height: 166.667%;
+    }
+
+    &-select {
+      flex: 1;
+    }
+
+    &-input {
+      flex: 1;
+      height: 46px;
+      border: 1px solid #c4d1d0;
+      border-radius: 5px;
+      font-size: 1.6rem;
+      font-weight: 400;
+      line-height: 166.667%;
+
+      & input::placeholder {
+        color: #566363;
+        font-size: 1.6rem;
+        font-weight: 400;
+        line-height: 166.667%;
+      }
+    }
+  }
+
+  &-form-group {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+
+    & > div {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    & textarea {
+      width: 100%;
+      padding: 15px;
+      border: 1px solid #c4d1d0;
+      border-radius: 5px;
+      background: #fff;
+      height: 180px;
+    }
+  }
+
+  &-methods {
+    margin-top: 20px;
+    font-size: 1.8rem;
+    font-weight: 500;
+
+    & > div {
+      margin-top: 12px;
+      display: flex;
+      align-items: center;
+      gap: 30px;
+    }
+
+    & label {
+      color: #566363;
+      font-size: 1.8rem;
+      font-weight: 400;
+      line-height: 166.667%;
+      cursor: pointer;
+    }
+
+    & input {
+      width: 20px;
+      height: 20px;
+      accent-color: #005d63;
+    }
+
+    &-group {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      user-select: none;
+    }
+  }
+}
+
+.select {
+  &-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  &-error {
+    margin-top: 6px;
+    color: red;
+    font-size: 1.4rem;
+    font-weight: 400;
+  }
+}
+
+.cart {
+  &-order {
+    margin: 18px 0;
+    padding: 18px 0;
+    border-top: 1px solid #c4d1d0;
+    border-bottom: 1px solid #c4d1d0;
+
+    &-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      color: #566363;
+      font-size: 1.4rem;
+      font-weight: 400;
+      line-height: 171.429%;
+    }
+
+    &-row + &-row {
+      margin-top: 12px;
+    }
+
+    &-bottom {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      & span {
+        color: #131717;
+        font-size: 2rem;
+        font-weight: 700;
+        line-height: 150%;
+      }
+    }
+
+    &-btn {
+      width: 100%;
+      margin-top: 44px;
+
+      &:hover {
+        opacity: 0.88;
+      }
+    }
+  }
+}

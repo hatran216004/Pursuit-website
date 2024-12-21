@@ -1,0 +1,34 @@
+.thankyou {
+  margin-top: 40px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  & p {
+    margin-bottom: 20px;
+    font-size: 5rem;
+    color: #005d63;
+    line-height: 1.5;
+    font-weight: 700;
+  }
+
+  & img {
+    flex: 1;
+    object-fit: cover;
+    width: 500px;
+    height: 500px;
+  }
+
+  & a {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-size: 3rem;
+    font-weight: 600;
+    color: #ffd44d;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}

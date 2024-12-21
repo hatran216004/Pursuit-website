@@ -1,0 +1,11 @@
+.popover {
+  width: max-content;
+  max-width: calc(100vw - 20px);
+  background-color: white;
+  border: 1px solid #ddd;
+  font-size: 90%;
+  border-radius: 6px;
+  text-align: left;
+  cursor: pointer;
+  z-index: 99;
+}

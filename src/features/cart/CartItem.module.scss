@@ -1,0 +1,146 @@
+.cart {
+  &-item {
+    &-header {
+      padding-bottom: 18px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid #c4d1d0;
+    }
+
+    &-header > span {
+      color: #131717;
+      font-size: 1.4rem;
+      font-weight: 400;
+      line-height: 171.429%;
+    }
+
+    &-remove {
+      padding: 6px 8px;
+      color: #566363;
+      border-bottom: 1px solid #566363;
+      font-size: 1.4rem;
+      font-weight: 400;
+      line-height: 171.429%;
+
+      &:hover {
+        color: red;
+        border-color: red;
+      }
+    }
+
+    &-qty {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+    }
+
+    &-qty > span {
+      color: #131717;
+      font-size: 1.8rem;
+      font-weight: 600;
+      line-height: 166.667%;
+    }
+
+    &-qty div:nth-child(2) {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    &-qty button {
+      height: 24px;
+      width: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #c4d1d0;
+
+      &:hover {
+        opacity: 0.9;
+      }
+    }
+
+    &-info {
+      padding: 18px 0 22px;
+      display: flex;
+      align-items: center;
+      gap: 18px;
+    }
+
+    &-info div:nth-child(2) {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &-img {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+    }
+
+    &-name {
+      color: #131717;
+      font-size: 1.8rem;
+      font-weight: 600;
+      line-height: 166.667%;
+    }
+
+    &-id {
+      margin: 4px 0 8px;
+      color: #566363;
+      font-size: 1.6rem;
+      font-weight: 400;
+      line-height: 175%;
+    }
+
+    &-price {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: #131717;
+      font-size: 1.8rem;
+      font-weight: 600;
+      line-height: 166.667%;
+    }
+  }
+}
+
+.delete-wrapper {
+  & p {
+    max-width: 300px;
+    line-height: 1.5;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 500;
+    color: #005d63;
+  }
+
+  & div {
+    padding-top: 14px;
+    margin-top: 12px;
+    border-top: 1px solid #ccc;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+
+    & button:nth-child(1) {
+      background-color: #fff;
+      border: 2px solid #005d63;
+      color: #131717;
+    }
+  }
+
+  & button {
+    flex: 1;
+    padding: 12px;
+    border-radius: 6px;
+    color: #fff;
+    font-weight: 500;
+    background-color: #005d63;
+
+    &:hover {
+      opacity: 0.9;
+    }
+  }
+}

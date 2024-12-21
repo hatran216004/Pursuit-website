@@ -1,0 +1,68 @@
+.wrapper {
+  margin-top: 150px;
+}
+
+.review {
+  &-title {
+    color: #131717;
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 150%;
+  }
+
+  &-subTitle {
+    margin-top: 16px;
+    color: #131717;
+    font-size: 1.8rem;
+    font-weight: 600;
+    line-height: 166.667%;
+  }
+
+  &-stars {
+    margin-top: 8px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+
+  &-group {
+    margin-top: 30px;
+  }
+
+  &-detail {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+
+    & + .review-detail {
+      margin-top: 12px;
+    }
+
+    & span {
+      color: #131717;
+      font-size: 1.8rem;
+      font-weight: 400;
+      line-height: 166.667%;
+    }
+  }
+
+  &-progress {
+    width: 433px;
+    height: 4px;
+    background-color: #c4d1d0;
+
+    & > div {
+      height: 100%;
+      background-color: #404b4b;
+    }
+  }
+
+  &-comment {
+    margin: 12px 0 30px;
+    padding: 15px;
+    height: 180px;
+    width: 100%;
+    border: 1px solid #c4d1d0;
+    background: #fff;
+  }
+}

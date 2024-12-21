@@ -1,0 +1,25 @@
+.hero {
+  padding: 60px 0 70px;
+  background: #f1deb4;
+
+  &-right img {
+    width: 528px;
+    height: 528px;
+    object-fit: cover;
+  }
+}
+
+.heading {
+  color: #131717;
+  font-size: 5.8rem;
+  font-weight: 700;
+  line-height: 6.8rem; /* 117.241% */
+}
+
+.text {
+  margin: 20px 0 34px 0;
+  color: #131717;
+  font-size: 1.8rem;
+  font-weight: 400;
+  line-height: 3rem; /* 166.667% */
+}

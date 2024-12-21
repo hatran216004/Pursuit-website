@@ -1,0 +1,73 @@
+.upload-image {
+  &__wrapper {
+    min-width: 340px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__thumb {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    & img {
+      width: 200px;
+      height: 200px;
+      border: 3px solid #ccc;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+  }
+
+  &__btn {
+    margin: 18px auto 0;
+    padding: 8px;
+    width: fit-content;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: #005d63;
+    background-color: #fff;
+    border: 1px solid #005d63;
+    border-radius: 4px;
+    cursor: pointer;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}
+
+.update {
+  &-actions {
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    & button:nth-child(1):hover {
+      background-color: #fff;
+      color: #005d63;
+      opacity: 0.8;
+    }
+  }
+
+  &-btn__submit {
+    flex: 1;
+    height: 46px;
+    border-radius: 4px;
+  }
+
+  &-content {
+    margin-top: -20px;
+  }
+}
+
+.form-text__input {
+  min-width: 300px;
+}

@@ -1,0 +1,40 @@
+.wrapper {
+  margin-top: 70px;
+}
+
+.reviewCard {
+  &-item {
+    padding: 28px;
+    background: #fff;
+    box-shadow: 0px 20px 70px 0px rgba(0, 0, 0, 0.07);
+  }
+
+  &-img {
+    width: 54px;
+    height: 54px;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+
+  &-name {
+    margin-bottom: 8px;
+    color: #131717;
+    font-size: 1.8rem;
+    font-weight: 600;
+    line-height: 166.667%;
+  }
+
+  &-rating img {
+    margin-right: 4px;
+    width: 18px;
+    height: 18px;
+  }
+
+  &-text {
+    margin-top: 16px;
+    color: #566363;
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 175%;
+  }
+}

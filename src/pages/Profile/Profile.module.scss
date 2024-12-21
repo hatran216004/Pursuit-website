@@ -1,0 +1,151 @@
+.profile {
+  &-container {
+    margin-top: 40px;
+    padding: 20px;
+    background-color: #f9f9f9;
+  }
+
+  &-main {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &-sidebar {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #fff;
+    color: #131717;
+    border-radius: 6px;
+    box-shadow: 0px 20px 60px 10px rgba(237, 237, 246, 0.2);
+  }
+
+  &-sidebar ul {
+    padding: 20px 0 0;
+  }
+
+  &-sidebar li + li {
+    margin-top: 10px;
+  }
+
+  &-sidebar li button {
+    width: 100%;
+    border-radius: 5px;
+    padding: 14px 18px;
+    cursor: pointer;
+    color: #131717;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    font-size: 1.6rem;
+    background-color: #fff;
+    transition: background-color, color;
+    transition-duration: 0.08s;
+
+    &:hover {
+      background-color: #005d63;
+      color: #fff;
+    }
+
+    &.active {
+      background-color: rgba($color: #005d63, $alpha: 0.9);
+      color: #fff;
+    }
+  }
+
+  &-sidebar li + li button {
+    border-top: 1px solid rgba($color: #ccc, $alpha: 0.2);
+  }
+
+  &-sidebar__icon {
+    width: 23px;
+    height: 23px;
+  }
+
+  &-header {
+    padding: 10px;
+    color: #fff;
+    border-radius: 5px;
+  }
+
+  &-title {
+    font-size: 3.2rem;
+    font-weight: 600;
+    color: #131717;
+  }
+
+  &-picture {
+    padding-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid #ccc;
+    cursor: pointer;
+
+    & img {
+      border-radius: 50%;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &-picture__thumb {
+    border-radius: 50%;
+    position: relative;
+    overflow: hidden;
+    width: 120px;
+    height: 120px;
+    border: 3px solid #ccc;
+
+    &:hover .profile-picture__icon {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+  &-picture__icon {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba($color: #000000, $alpha: 0.3);
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility, opacity;
+    transition-duration: 0.2s;
+  }
+
+  &-content {
+    margin-top: 20px;
+    border-radius: 6px;
+    background-color: #fff;
+    box-shadow: 0px 20px 60px 10px rgba(237, 237, 246, 0.2);
+  }
+
+  &-row {
+    padding: 12px 20px;
+    cursor: pointer;
+
+    & + .profile-row {
+      border-top: 1px solid rgba($color: #ccc, $alpha: 0.4);
+    }
+  }
+
+  &-label {
+    margin-bottom: 4px;
+    font-size: 1.6rem;
+    font-weight: 500;
+    line-height: 1.4;
+  }
+
+  &-data {
+    font-size: 1.8rem;
+    font-weight: 350;
+    color: #131717;
+    line-height: 1.4;
+  }
+}
