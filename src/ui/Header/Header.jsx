@@ -1,6 +1,6 @@
 import styles from './Header.module.scss';
 import classNames from 'classnames/bind';
-import { Link, NavLink, useNavigate } from 'react-router-dom';
+import { Link, NavLink, useNavigate, useSearchParams } from 'react-router-dom';
 import { CiSearch } from 'react-icons/ci';
 import { RiShoppingCartLine } from 'react-icons/ri';
 import { CgProfile } from 'react-icons/cg';
@@ -15,7 +15,6 @@ import { useLogout } from '../../features/Auth/useLogout';
 import { useUser } from '../../features/Auth/useUser';
 import { cutStringUntil } from '../../utils/helper';
 import { schema } from '../../utils/rules';
-import { useUrl } from '../../hooks/useUrl';
 import Tooltip from '../../ui/Tooltip';
 import Popover from '../Popover';
 import logo from '../../assets/img/logo.svg';
@@ -29,12 +28,12 @@ function Header() {
   const { isAuthenticated } = useAppContext();
   const { cart } = useCart();
   const { user } = useUser();
+  const [searchParams] = useSearchParams();
   const naviagte = useNavigate();
-  const { currentValue, handler } = useUrl('search', '');
   const { register, handleSubmit } = useForm({
     resolver: yupResolver(searchSchema),
     defaultValues: {
-      searchValue: currentValue
+      searchValue: searchParams.get('search') || ''
     }
   });
 
@@ -45,7 +44,10 @@ function Header() {
   }
 
   function onSubmit({ searchValue }) {
-    handler(searchValue);
+    // Sao chép các params hiện có
+    const newParams = new URLSearchParams(searchParams);
+    newParams.set('search', searchValue);
+    naviagte(`/products?${newParams.toString()}`);
   }
 
   return (

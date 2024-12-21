@@ -35,7 +35,7 @@ export default function Products() {
           We hear what you need. We plan, design & develop visionary concept
           websites.
         </p>
-        <div className={cx('main row')}>
+        <div className={cx('row')}>
           <div className="col-10">
             <div className={cx('operations')}>
               <div className={cx('pagination')}>

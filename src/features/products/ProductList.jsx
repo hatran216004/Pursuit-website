@@ -5,7 +5,6 @@ import { useProducts } from './useProducts';
 import Spinner from '../../ui/Spinner';
 import Product from './Product';
 import Pagination from '../../ui/Pagination';
-// import Uploader from '../../ui/Uploader';
 
 const cx = classNames.bind(styles);
 

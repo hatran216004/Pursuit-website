@@ -19,7 +19,7 @@ export default function Home() {
       <Hero />
       <Container>
         <h3>Find something you love</h3>
-        <div className={cx('main row')}>
+        <div className={cx('row')}>
           <div className="col-12">
             <div className={cx('operations')}>
               <div className={cx('pagination')}>
