@@ -238,7 +238,6 @@ function ProductDetail() {
                     <Button className="w-full" onClick={handleAddToCart}>
                       {isCreating ? <SpinnerMini /> : 'Add to cart'}
                     </Button>
-                    <Button className="w-full">Check out</Button>
                   </div>
                 </>
               )}
