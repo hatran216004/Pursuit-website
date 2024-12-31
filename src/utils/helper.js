@@ -67,3 +67,13 @@ export function createSignature(data, checksumKey) {
 
   return signature;
 }
+
+export function debounce(callback, timeout = 500) {
+  let timerId;
+  return (...args) => {
+    clearTimeout(timerId);
+    timerId = setTimeout(() => {
+      callback(...args);
+    }, timeout);
+  };
+}

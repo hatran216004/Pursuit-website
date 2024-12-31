@@ -6,22 +6,18 @@ import { RiShoppingCartLine } from 'react-icons/ri';
 import { CgProfile } from 'react-icons/cg';
 import { IoLogOutOutline, IoSettingsOutline } from 'react-icons/io5';
 import { VscLayoutMenubar } from 'react-icons/vsc';
-import { useForm } from 'react-hook-form';
-import { yupResolver } from '@hookform/resolvers/yup';
 
 import { useCart } from '../../features/cart/useCart';
 import { useAppContext } from '../../context/AppContext';
 import { useLogout } from '../../features/Auth/useLogout';
 import { useUser } from '../../features/Auth/useUser';
-import { cutStringUntil } from '../../utils/helper';
-import { schema } from '../../utils/rules';
+import { cutStringUntil, debounce } from '../../utils/helper';
 import Tooltip from '../../ui/Tooltip';
 import Popover from '../Popover';
 import logo from '../../assets/img/logo.svg';
 import default_user from '../../assets/img/default-user.png';
 
 const cx = classNames.bind(styles);
-const searchSchema = schema.pick(['searchValue']);
 
 function Header() {
   const { logout } = useLogout();
@@ -30,12 +26,6 @@ function Header() {
   const { user } = useUser();
   const [searchParams] = useSearchParams();
   const naviagte = useNavigate();
-  const { register, handleSubmit } = useForm({
-    resolver: yupResolver(searchSchema),
-    defaultValues: {
-      searchValue: searchParams.get('search') || ''
-    }
-  });
 
   let name;
   if (user) {
@@ -43,12 +33,12 @@ function Header() {
     name = sliceName.length > 10 ? user.email.slice(0, 10) + '...' : sliceName;
   }
 
-  function onSubmit({ searchValue }) {
+  const handleChange = debounce((e) => {
     // Sao chép các params hiện có
     const newParams = new URLSearchParams(searchParams);
-    newParams.set('search', searchValue);
+    newParams.set('search', e.target.value.trim());
     naviagte(`/products?${newParams.toString()}`);
-  }
+  });
 
   return (
     <header
@@ -61,13 +51,13 @@ function Header() {
           <Link to="/">
             <img src={logo} alt="Pursuit" />
           </Link>
-          <form onSubmit={handleSubmit(onSubmit)} className={cx('search')}>
+          <form className={cx('search')}>
             <input
               spellCheck="false"
-              {...register('searchValue')}
               type="text"
               className={cx('input')}
               placeholder="Search for anything"
+              onChange={handleChange}
             />
             <button className={cx('search-btn')}>
               <CiSearch />
