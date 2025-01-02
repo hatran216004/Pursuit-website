@@ -14,6 +14,7 @@ import LoginLayout from './layout/LoginLayout';
 import Home from './pages/Home';
 import Cart from './features/cart';
 import About from './pages/About';
+import Error from './pages/Error';
 import ProductDetail from './features/products/ProductDetail';
 import Login from './features/Auth/Login';
 import Signup from './features/Auth/Signup';
@@ -67,6 +68,7 @@ function App() {
                 <Route element={<Signup />} path="signup" />
               </Route>
             </Route>
+            <Route path="*" element={<Error />} />
           </Routes>
         </BrowserRouter>
         <Toaster
