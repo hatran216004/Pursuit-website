@@ -14,7 +14,7 @@ import LoginLayout from './layout/LoginLayout';
 import Home from './pages/Home';
 import Cart from './features/cart';
 import About from './pages/About';
-import Error from './pages/Error';
+import Error from './pages/Error/Error';
 import ProductDetail from './features/products/ProductDetail';
 import Login from './features/Auth/Login';
 import Signup from './features/Auth/Signup';
