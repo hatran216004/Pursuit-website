@@ -36,7 +36,7 @@ export default function Products() {
           websites.
         </p>
         <div className={cx('row')}>
-          <div className="col-10">
+          <div className="col-10 col-xl-12">
             <div className={cx('operations')}>
               <div className={cx('pagination')}>
                 <Button
@@ -84,7 +84,7 @@ export default function Products() {
             </div>
             <ProductList />
           </div>
-          <div className="col-2">
+          <div className="d-block d-xl-none col-2">
             <AsideFilter />
           </div>
         </div>

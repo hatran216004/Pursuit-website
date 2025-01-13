@@ -1,7 +1,6 @@
 import styles from './Header.module.scss';
 import classNames from 'classnames/bind';
 import { Link, NavLink, useNavigate, useSearchParams } from 'react-router-dom';
-import { CiSearch } from 'react-icons/ci';
 import { RiShoppingCartLine } from 'react-icons/ri';
 import { CgProfile } from 'react-icons/cg';
 import { IoLogOutOutline, IoSettingsOutline } from 'react-icons/io5';
@@ -59,9 +58,6 @@ function Header() {
               placeholder="Search for anything"
               onChange={handleChange}
             />
-            <button className={cx('search-btn')}>
-              <CiSearch />
-            </button>
           </form>
           {isAuthenticated ? (
             <div className={cx('actions')}>
