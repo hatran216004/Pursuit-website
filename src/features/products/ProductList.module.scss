@@ -1,6 +1,10 @@
 .wrapper {
   position: relative;
   margin-top: 20px;
+  height: calc(100% - 46px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .no-products {
